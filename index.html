@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Marino Kitchens and Interiors | Warren Jordan</title>
+  <meta name="description" content="San Marino Kitchens and Interiors - custom-made kitchens, bedroom cupboards, bathrooms, pubs, TV display units and interiors for over 25 years." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f7f3eb;
+      background:
+        radial-gradient(circle at top left, rgba(199, 155, 62, 0.30), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.10), transparent 30%),
+        linear-gradient(135deg, #080806, #181611 55%, #050505);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 26px 16px 46px;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+    }
+
+    .hero-card,
+    .contact-card,
+    .gallery-card {
+      background: rgba(18, 17, 14, 0.88);
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      border-radius: 30px;
+      box-shadow: 0 26px 90px rgba(0,0,0,0.48);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-content {
+      padding: 34px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+      color: #e9c46a;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .brand-mark i {
+      color: #d4af37;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 0.95;
+      margin: 0 0 16px;
+      letter-spacing: -1.6px;
+      color: #fff;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .subtitle {
+      font-size: 19px;
+      line-height: 1.55;
+      color: #e7e1d5;
+      max-width: 620px;
+      margin: 0 0 22px;
+    }
+
+    .experience {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 15px;
+      border-radius: 16px;
+      background: rgba(212,175,55,0.12);
+      border: 1px solid rgba(212,175,55,0.28);
+      color: #fff5d3;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+      max-width: 430px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      text-decoration: none;
+      padding: 16px 18px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 850;
+      background: #d4af37;
+      color: #101010;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+
+    .btn.dark {
+      background: rgba(255,255,255,0.09);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .btn.facebook {
+      background: #1877F2;
+      color: #fff;
+    }
+
+    .btn.instagram {
+      background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+      color: #fff;
+    }
+
+    .hero-image {
+      min-height: 620px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.78)),
+        url('gallery-8.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-image .overlay {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(0,0,0,0.58);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .hero-image .overlay h2 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .hero-image .overlay p {
+      margin: 0;
+      color: #ddd;
+      line-height: 1.45;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 0 0 18px;
+      font-size: clamp(28px, 4vw, 42px);
+      color: #fff;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .service {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.13);
+      text-align: center;
+      color: #f4ead8;
+    }
+
+    .service i {
+      display: block;
+      font-size: 28px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .gallery-card {
+      padding: 24px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 190px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.28s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .contact-card {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      color: #fff;
+    }
+
+    .contact-card p {
+      margin: 0 auto 22px;
+      color: #ddd;
+      line-height: 1.55;
+      max-width: 620px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255,255,255,0.62);
+      padding: 30px 10px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-image {
+        min-height: 430px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 12px 10px 30px;
+      }
+
+      .hero-content,
+      .contact-card,
+      .gallery-card {
+        padding: 22px;
+      }
+
+      .hero-card,
+      .contact-card,
+      .gallery-card {
+        border-radius: 24px;
+      }
+
+      .hero-image {
+        min-height: 360px;
+      }
+
+      .services,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        gap: 9px;
+      }
+
+      .gallery-item {
+        min-height: 145px;
+        border-radius: 14px;
+      }
+
+      .btn {
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="brand-mark">
+            <i class="fa-solid fa-kitchen-set"></i>
+            SAN MARINO KITCHENS & INTERIORS
+          </div>
+
+          <h1>Custom kitchens, cupboards & interiors.</h1>
+
+          <p class="subtitle">
+            We specialize in designing and manufacturing custom-made kitchens, bedroom cupboards, bathrooms, pubs, TV display units and interiors.
+          </p>
+
+          <div class="experience">
+            <i class="fa-solid fa-award"></i>
+            Over 25 years of experience
+          </div>
+
+          <div class="buttons">
+            <a class="btn" href="Warren_Jordan_San_Marino_Kitchens.vcf" download>
+              <i class="fa-solid fa-address-card"></i> Save Warren's Contact
+            </a>
+
+            <a class="btn dark" href="tel:+27848145724">
+              <i class="fa-solid fa-phone"></i> Call Warren
+            </a>
+
+            <a class="btn dark" href="mailto:sanmarinokitchens249@gmail.com?subject=Kitchen%20%26%20Interior%20Enquiry">
+              <i class="fa-solid fa-envelope"></i> Email Enquiry
+            </a>
+
+            <a class="btn facebook" href="https://www.facebook.com/Sanmarinokitchensandinteriors" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+
+            <a class="btn instagram" href="https://www.instagram.com/san_marino_kitchens/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card hero-image">
+        <div class="overlay">
+          <h2>Warren Jordan</h2>
+          <p>San Marino Kitchens and Interiors</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What We Do</h2>
+      <div class="services">
+        <div class="service"><i class="fa-solid fa-kitchen-set"></i> Custom Kitchens</div>
+        <div class="service"><i class="fa-solid fa-door-closed"></i> Bedroom Cupboards</div>
+        <div class="service"><i class="fa-solid fa-bath"></i> Bathrooms</div>
+        <div class="service"><i class="fa-solid fa-wine-glass"></i> Pubs & Bars</div>
+        <div class="service"><i class="fa-solid fa-tv"></i> TV Display Units</div>
+        <div class="service"><i class="fa-solid fa-couch"></i> Interiors</div>
+      </div>
+    </section>
+
+    <section class="section gallery-card">
+      <h2 class="section-title">Recent Work</h2>
+      <div class="gallery">
+        <a href="gallery-1.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-1.jpg" alt="San Marino Kitchens project 1">
+        </a>
+        <a href="gallery-2.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-2.jpg" alt="San Marino Kitchens project 2">
+        </a>
+        <a href="gallery-3.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-3.jpg" alt="San Marino Kitchens project 3">
+        </a>
+        <a href="gallery-4.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-4.jpg" alt="San Marino Kitchens project 4">
+        </a>
+        <a href="gallery-5.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-5.jpg" alt="San Marino Kitchens project 5">
+        </a>
+        <a href="gallery-6.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-6.jpg" alt="San Marino Kitchens project 6">
+        </a>
+        <a href="gallery-7.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-7.jpg" alt="San Marino Kitchens project 7">
+        </a>
+        <a href="gallery-8.jpg" class="gallery-item" target="_blank" rel="noopener noreferrer">
+          <img src="gallery-8.jpg" alt="San Marino Kitchens project 8">
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact-card">
+      <h2>Ready to discuss your project?</h2>
+      <p>
+        Tap below to call, email, save Warren's contact details, or view San Marino Kitchens and Interiors on social media.
+      </p>
+
+      <div class="contact-grid">
+        <a class="btn" href="Warren_Jordan_San_Marino_Kitchens.vcf" download>
+          <i class="fa-solid fa-address-card"></i> Save Contact
+        </a>
+
+        <a class="btn dark" href="tel:+27848145724">
+          <i class="fa-solid fa-phone"></i> +27 84 814 5724
+        </a>
+
+        <a class="btn dark" href="mailto:sanmarinokitchens249@gmail.com?subject=Kitchen%20%26%20Interior%20Enquiry">
+          <i class="fa-solid fa-envelope"></i> Email Warren
+        </a>
+
+        <a class="btn facebook" href="https://www.facebook.com/Sanmarinokitchensandinteriors" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © San Marino Kitchens and Interiors • Digital business card for Warren Jordan
+    </footer>
+  </main>
+</body>
+</html>
